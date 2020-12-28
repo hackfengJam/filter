@@ -1,4 +1,4 @@
-module filter
+module github.com/hackfengJam/filter
 
 go 1.14
 
