@@ -117,6 +117,8 @@ func (s *OperationTestSuite) TestListMatch() {
 	tests := []opTestCase{
 		{[]interface{}{"data.fav_books", "has", "book1,book3"}, true, false},
 		{[]interface{}{"data.fav_books", "has", "book1,book3,book4"}, false, false},
+		{[]interface{}{"data.fav_books", "!has", "book4"}, true, false},
+		{[]interface{}{"data.fav_books", "!has", "book4,book5"}, true, false},
 		{[]interface{}{"data.pets", "any", "cat,pig"}, true, false},
 		{[]interface{}{"data.pets", "any", "rabbit,fly"}, false, false},
 		{[]interface{}{"data.pets", "none", []interface{}{"pig", "rabbit"}}, true, false},
@@ -124,7 +126,7 @@ func (s *OperationTestSuite) TestListMatch() {
 	}
 
 	s.testCases(tests)
-	s.testCases(s.getOppositeCases(tests, map[string]string{"any": "none", "none": "any"}))
+	s.testCases(s.getOppositeCases(tests, map[string]string{"any": "none", "none": "any", "has": "!has", "!has": "has"}))
 }
 
 func (s *OperationTestSuite) getOppositeCases(tests []opTestCase, oppositeOpMap map[string]string) []opTestCase {

@@ -28,6 +28,7 @@ func init() {
 			"!~":      &NotMatchOperation{stringer: stringer("!~")},
 			"any":     &AnyOperation{stringer: stringer("any")},
 			"has":     &HasOperation{stringer: stringer("has")},
+			"!has":    &NotHasOperation{stringer: stringer("!has")},
 			"none":    &NoneOperation{stringer: stringer("none")},
 		},
 	}
@@ -338,4 +339,14 @@ type NoneOperation struct {
 
 func (o *NoneOperation) Run(ctx *Context, variable Variable, value interface{}) bool {
 	return !o.AnyOperation.Run(ctx, variable, value)
+}
+
+//----------------------------------------------------------------------------------
+type NotHasOperation struct {
+	stringer
+	HasOperation
+}
+
+func (o *NotHasOperation) Run(ctx *Context, variable Variable, value interface{}) bool {
+	return !o.HasOperation.Run(ctx, variable, value)
 }
