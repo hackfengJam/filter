@@ -117,8 +117,11 @@ func (s *OperationTestSuite) TestListMatch() {
 	tests := []opTestCase{
 		{[]interface{}{"data.fav_books", "has", "book1,book3"}, true, false},
 		{[]interface{}{"data.fav_books", "has", "book1,book3,book4"}, false, false},
-		{[]interface{}{"data.fav_books", "!has", "book4"}, true, false},
 		{[]interface{}{"data.fav_books", "!has", "book4,book5"}, true, false},
+		{[]interface{}{"data.fav_books", "!has", "book1,book3"}, false, false},
+		{[]interface{}{"data.fav_books", "!has", "book4"}, true, false},
+		{[]interface{}{"data.fav_books", "!has", "book1,book4"}, true, false},
+		{[]interface{}{"data.fav_books", "!has", "book1"}, false, false},
 		{[]interface{}{"data.pets", "any", "cat,pig"}, true, false},
 		{[]interface{}{"data.pets", "any", "rabbit,fly"}, false, false},
 		{[]interface{}{"data.pets", "none", []interface{}{"pig", "rabbit"}}, true, false},
