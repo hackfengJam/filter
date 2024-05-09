@@ -11,6 +11,8 @@ github.com/spaolacci/murmur3 v1.1.0/go.mod h1:JwIasOWyU6f++ZhiEuf87xNszmSA2myDM2
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.6.1 h1:hDPOHmpOpP40lSULcqw7IrRb/u7w6RpDC9399XyoNd0=
 github.com/stretchr/testify v1.6.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
+github.com/techxmind/filter v0.0.0-20201204063700-d06ee97680dd h1:cJl2H2tR+4AXbFybpzEwB5LtkxXM3PEa/p6FwHytRWs=
+github.com/techxmind/filter v0.0.0-20201204063700-d06ee97680dd/go.mod h1:mtyPAGgGcMwtPgVpSkjoqtZBPhzJvfGPu4bCq+gcvj0=
 github.com/techxmind/go-utils v0.0.0-20201127043211-03b94e0bd51e h1:1mDmWymk9uDjI5ofH2J9stlZoNUYWWWFDqcV2ksMxRk=
 github.com/techxmind/go-utils v0.0.0-20201127043211-03b94e0bd51e/go.mod h1:F8DtfFXxjw9sDArW6D/kbA83e0tjkCayyOSRCPEX+YQ=
 github.com/techxmind/ip2location v0.0.0-20201016120605-9ca74285b024 h1:kj2r55FtGEUQ4ixRefHAwf2aNm7+9gSFk/4zRMeVyEo=
